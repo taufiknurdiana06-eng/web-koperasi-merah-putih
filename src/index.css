@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Premium Sophisticated Dark Color Mappings */
+  --color-brand-dark: #0F0F0E;      /* Base Dark Background */
+  --color-brand-cream: #1A1A18;     /* Card Secondary Background */
+  --color-brand-green: #8B5E3C;     /* Coffee Bronze Accent */
+  --color-brand-gold: #C4A484;      /* Soft Copper Gold Accent */
+  --color-brand-red: #8F2D2D;       /* Muted Merah Crimson */
+  --color-brand-border: #2A2A28;    /* Dark Charcoal-Bronze Border */
+  --color-brand-text: #E0D8D0;      /* Warm Off-White Text */
+
+  /* Overriding default Tailwind zinc scale for flawless automated theme integration */
+  --color-zinc-50: #121210;         /* Deeper dark shade */
+  --color-zinc-100: #1C1C1A;        /* Deep shade */
+  --color-zinc-200: #2A2A28;        /* Border color */
+  --color-zinc-300: #3E3E3C;        /* Secondary border */
+  --color-zinc-400: #8E8A84;        /* Muted text */
+  --color-zinc-500: #A29E96;        /* Secondary text */
+  --color-zinc-600: #C0B8B0;        /* Body text */
+  --color-zinc-700: #D8D0C8;        /* Highlight text */
+  --color-zinc-800: #EADFD4;        /* Brightest text */
+  --color-zinc-900: #FFFFFF;
+
+  /* Overriding white so all white cards instantly turn into elegant dark cards */
+  --color-white: #1A1A18;
+}
+
+/* Base custom styles to elevate premium details */
+html, body {
+  background-color: var(--color-brand-dark);
+  color: var(--color-brand-text);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+/* Ensure placeholder and selected styling fit the dark theme */
+::selection {
+  background-color: var(--color-brand-green);
+  color: #FFFFFF;
+}
+
+/* Scrollbar customization matching Sophisticated Dark palette */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-gold);
+}
+
+/* General fixes for any absolute white text on white backgrounds or card elements */
+.text-brand-dark {
+  color: var(--color-brand-text) !important;
+}
+
+/* Ensure input and textareas are dark-themed */
+input, textarea, select {
+  background-color: #121210 !important;
+  color: var(--color-brand-text) !important;
+  border-color: var(--color-brand-border) !important;
+}
+
+/* Let's keep the toast notification beautifully visible with dark border */
+.fixed.bottom-6.right-6 {
+  background-color: #1C1C1A !important;
+  border-color: #3E3E3C !important;
+}
+

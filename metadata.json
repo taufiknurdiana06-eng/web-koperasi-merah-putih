@@ -1,0 +1,6 @@
+{
+  "name": "Branding Hub Koperasi Desa Merah Putih",
+  "description": "Portal branding digital premium lengkap untuk Koperasi Desa Merah Putih (KDKMP), eksportir dan pemasar biji kopi Arabika khas Garut, Jawa Barat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
